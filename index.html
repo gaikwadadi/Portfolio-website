@@ -10,16 +10,30 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    <!-- Force About Me text color -->
-    <style>
-        #about-me,
-        #about-me * {
-            color: #fff !important; /* Force all text inside About Me to white */
-        }
-        #about-me a:hover {
-            color: #ffd700 !important; /* Gold hover effect for links */
-        }
-    </style>
+    <!-- Custom Styles -->
+	<style>
+	    /* Force About Me text to always be white */
+	    #about-me,
+	    #about-me * {
+	        color: #fff !important;
+	    }
+
+	    /* Hover color for links inside About Me */
+	    #about-me a:hover {
+	        color: #ffd700 !important;
+	    }
+
+	    /* Social icons white by default, gold on hover */
+	    .icons a {
+	        color: #fff !important;
+	        font-size: 1.5rem;
+	        transition: color 0.3s ease;
+	    }
+
+	    .icons a:hover {
+	        color: #ffd700 !important;
+	    }
+	</style>
 </head>
 <body class="is-preload">
 
@@ -28,11 +42,8 @@
 
         <!-- Intro Section -->
         <section id="intro" style="padding: 3rem 2rem; text-align: center; max-width: 900px; margin: auto;">
-            <img 
-                src="images/Aditya.png" 
-                alt="Aditya Gaikwad" 
-                style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px; border: 3px solid white; display: block; margin: 0 auto 1.5rem auto;"
-            />
+            <img src="images/Aditya.png" alt="Aditya Gaikwad" 
+                style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px; border: 3px solid white; display: block; margin: 0 auto 1.5rem auto;" />
             <h1 style="margin-bottom: 0.5rem;">Aditya Gaikwad</h1>
             <p style="font-size: 1.3rem; color: #ffd700;">Data Scientist | Machine Learning | Analytics Enthusiast</p>
             <ul class="actions" style="margin-top: 2rem;">
@@ -42,7 +53,7 @@
 
         <!-- Header -->
         <header id="header" style="text-align: center; margin-bottom: 2rem;">
-            <a href="index.html" class="logo" style="font-size: 1.4rem; font-weight: bold; color: #222;">ADITYA GAIKWAD</a>
+            <a href="index.html" class="logo" style="font-size: 1.4rem; font-weight: bold;">ADITYA GAIKWAD</a>
         </header>
 
         <!-- Navigation -->
@@ -74,7 +85,7 @@
         <section id="about-me" style="padding: 3rem 2rem; max-width: 900px; margin: 2rem auto; text-align: justify;">
             <h1 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">About Me</h1>
 
-            <p style="margin-bottom: 1rem;">
+            <p>
                 I am passionate about transforming raw data into actionable insights, specializing in 
                 <strong>data preprocessing, feature engineering, predictive modeling, deep learning, and AI deployment</strong>. 
                 My technical expertise spans <strong>Python, Machine Learning, Deep Learning, SQL, Power BI, Scikit-learn, 
@@ -82,14 +93,14 @@
                 that address real-world business challenges.
             </p>
 
-            <p style="margin-bottom: 1rem;">
+            <p>
                 Beyond my technical skills, I am driven by curiosity and innovation, with a commitment to continuous learning. 
                 I thrive in collaborative environments, merging data-driven thinking with strategic decision-making 
                 to deliver measurable results. My current projects include <strong>deep learning, natural language processing, 
                 and AI-powered analytics</strong>, along with expanding expertise in cloud-based data solutions.
             </p>
 
-            <p style="margin-bottom: 1rem;">
+            <p>
                 I hold a <strong>Masters in Data Science and Analytics with AI</strong>, following my 
                 graduation in <strong>Mechanical Engineering</strong> from <strong>Savitribai Phule Pune University</strong>, 
                 where I developed a strong analytical foundation that now fuels my work in the data science domain.
