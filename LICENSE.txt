@@ -1,0 +1,84 @@
+Creative Commons Attribution 3.0 Unported License (CC BY 3.0)
+License URL: http://creativecommons.org/licenses/by/3.0/
+
+License Summary
+The work (as defined below) is provided under the terms of this Creative Commons Public License ("CCPL" or "License"). The work is protected by copyright and/or other applicable law. Any use of the work other than as authorized under this License or copyright law is prohibited.
+
+By exercising any rights to the work provided here, you accept and agree to be bound by the terms of this License.
+
+1. Definitions
+Adaptation: A work based upon the original work or works, including translations, derivative works, arrangements, or other alterations, except a collection of works will not be considered an adaptation.
+
+Collection: A collection of literary or artistic works assembled into a collective whole, where the original work is included in its entirety unmodified.
+
+Distribute: To make available to the public the original or copies of the work or adaptations.
+
+Licensor: The individual or entity offering the work under this License.
+
+Original Author: The creator(s) of the work or publisher, and in case of performances, phonograms, or broadcasts, the relevant producers or performers.
+
+Work: The literary and/or artistic work offered under this License.
+
+You: The individual or entity exercising rights under this License who complies with the terms.
+
+Publicly Perform: To perform or communicate the work publicly by any means.
+
+Reproduce: To make copies of the work by any means.
+
+2. Fair Dealing Rights
+Nothing in this License reduces or restricts any rights free from copyright or arising under applicable laws.
+
+3. License Grant
+Subject to the terms and conditions of this License, the Licensor grants you a worldwide, royalty-free, non-exclusive, perpetual license to:
+
+Reproduce the work and incorporate it into collections.
+
+Create and reproduce adaptations, provided adaptations clearly identify changes.
+
+Distribute and publicly perform the work and adaptations.
+
+Note: Rights may be exercised in all media and formats, including those now known or developed later.
+
+4. Restrictions
+You may only distribute or publicly perform the work under the terms of this License. You must:
+
+Include a copy or URI of this License with every distribution or public performance.
+
+Not impose terms that restrict others’ exercise of the licensed rights.
+
+Not sublicense the work.
+
+Keep intact all license and copyright notices.
+
+Provide proper attribution, including original author, title, and URI if supplied.
+
+Not distort, mutilate, or modify the work in a way prejudicial to the original author’s honor or reputation.
+
+5. Representations, Warranties, and Disclaimer
+The Licensor offers the work "as-is" without warranties of any kind, express or implied, including warranties of title, merchantability, fitness for a particular purpose, or non-infringement.
+
+6. Limitation on Liability
+Except as required by law, the Licensor will not be liable for any damages arising from the use of the work.
+
+7. Termination
+The license terminates automatically if you breach its terms.
+
+Termination does not affect those who received the work from you under this License, provided they comply with the terms.
+
+The license is perpetual unless terminated as stated above.
+
+Licensor may release the work under different license terms or stop distribution, but this does not withdraw this License.
+
+8. Miscellaneous
+Each distribution or public performance offers the recipient a license to the work on the same terms.
+
+If any provision is invalid or unenforceable, the rest remain in effect.
+
+No waiver or consent is valid unless in writing.
+
+This License is the entire agreement between parties concerning the work.
+
+Rights and terms align with international copyright treaties.
+
+For the full legal code, visit:
+http://creativecommons.org/licenses/by/3.0/legalcode
