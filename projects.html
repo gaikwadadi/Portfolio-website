@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Aditya Gaikwad | Projects</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="icon" type="image/png" href="images/portfolio.png" />
+</head>
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">ADITYA GAIKWAD</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">ABOUT ME</a></li>
+        <li class="active"><a href="projects.html">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+      </ul>
+      <ul class="icons">
+        <li>
+          <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin" aria-label="LinkedIn">
+            <span class="label">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer" class="icon brands fa-github" aria-label="GitHub">
+            <span class="label">GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <section class="post">
+        <!-- Main page heading -->
+        <header class="major">
+          <h1 style="font-size: 4rem; font-weight: bold; margin-bottom: 2rem;">
+            Worked Projects
+          </h1>
+        </header>
+
+        <!-- ===== Projects Section ===== -->
+        <section id="projects">
+
+          <!-- ===== Start: Project Template ===== -->
+          <div class="project">
+            <div class="project-left">
+              <h2>TRAFFIC LIGHT DETECTION USING YOLO V8</h2>
+              <a href="https://github.com/gaikwadadi/Traffic-Light-Detection-with-YOLOv8" target="_blank" rel="noopener noreferrer">
+                <img src="images/TrafficLight.jpg" alt="Traffic Light Detection Model" />
+              </a>
+            </div>
+            <div class="project-right">
+              <p>
+                Built a deep learning model to detect traffic lights in diverse real-world conditions using the Small Traffic Light Dataset (S2TLD).
+                Converted annotations from Pascal VOC to YOLO format, applied extensive data augmentation, and trained a YOLOv8 model with hyperparameter tuning.
+                Evaluated performance using mAP, precision, and recall to ensure robust detection across varied lighting, weather, and angles.
+                Implemented with Python, PyTorch, YOLOv8, OpenCV, and Albumentations, this project demonstrates practical expertise in object detection pipelines
+                from dataset preparation to high-performance model deployment.
+              </p>
+            </div>
+          </div>
+          <!-- ===== End: Project Template ===== -->
+
+          <div class="project">
+            <div class="project-left">
+              <h2>HEART DISEASE CLASSIFICATION MODEL</h2>
+              <a href="https://github.com/gaikwadadi/Heart-Disease-Prediction" target="_blank" rel="noopener noreferrer">
+                <img src="images/Heart.jpg" alt="Heart Disease Project" />
+              </a>
+            </div>
+            <div class="project-right">
+              <p>
+                Developed a predictive model to assess the likelihood of heart disease using patient health metrics.
+                Implemented and compared multiple algorithms — Logistic Regression, Decision Tree, SVM, Random Forest,
+                and Naive Bayes — with a workflow including data cleaning, preprocessing, feature scaling, and cross-validation.
+                Models were evaluated using precision, recall, F1-score, and accuracy. Built with Python, scikit-learn,
+                pandas, and matplotlib, this project demonstrates end-to-end ML skills from raw data to actionable insights.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-left">
+              <h2>SPOTIFY MUSIC DATA ANALYSIS</h2>
+              <a href="https://github.com/gaikwadadi/Spotify-Data-Analysis-Using-SQL" target="_blank" rel="noopener noreferrer">
+                <img src="images/spotify.jpg" alt="Spotify Data Analysis Project" />
+              </a>
+            </div>
+            <div class="project-right">
+              <p>
+                Conducted an end-to-end SQL project analyzing a Spotify dataset containing track, album, and artist details 
+                along with audio features such as danceability, energy, loudness, and tempo. The process involved normalizing 
+                a denormalized dataset, executing SQL queries across easy, medium, and advanced difficulty levels, and 
+                applying performance optimization techniques like indexing and query plan analysis. The goal was to practice 
+                advanced SQL skills while extracting actionable insights from complex music data.
+              </p>
+            </div>
+          </div>
+
+          <!-- ===== ADD NEW PROJECTS HERE =====
+               Copy one entire <div class="project"> ... </div> block above,
+               and paste below this comment, then update title, link, image, and description -->
+
+        </section>
+
+      </section>
+    </div> <!-- end of #main -->
+
+  </div> <!-- end of #wrapper -->
+
+  <!-- ===== Shared Styles ===== -->
+  <style>
+    #projects {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .project-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .project-left h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffd700;
+      text-align: left;
+    }
+
+    .project-left a img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .project-left a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .project-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .project-right p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin: 0;
+    }
+
+    @media (max-width: 800px) {
+      .project-right {
+        margin-top: 0 !important;
+      }
+    }
+
+    /* 🔥 Fix: remove space above Worked Projects heading */
+    header.major {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    header.major h1 {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    #main .post {
+    margin-top: 0 !important;
+    padding-top: 50px !important;
+    }
+  </style>
+
+  <!-- ===== Shared Script ===== -->
+  <script>
+    function alignProjectDescriptions() {
+      document.querySelectorAll('.project').forEach(section => {
+        const left = section.querySelector('.project-left');
+        const right = section.querySelector('.project-right');
+        if (!left || !right) return;
+
+        const title = left.querySelector('h2');
+        if (!title) {
+          right.style.marginTop = '0px';
+          return;
+        }
+
+        const titleHeight = title.getBoundingClientRect().height;
+        const spacing = 12; // px
+        const totalOffset = Math.round(titleHeight + spacing);
+
+        if (window.innerWidth > 800) {
+          right.style.marginTop = totalOffset + 'px';
+        } else {
+          right.style.marginTop = '0px';
+        }
+      });
+    }
+
+    window.addEventListener('load', alignProjectDescriptions);
+    window.addEventListener('resize', alignProjectDescriptions);
+  </script>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
