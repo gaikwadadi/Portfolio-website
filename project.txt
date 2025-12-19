@@ -1,0 +1,24 @@
+Project 1
+
+Serverless AI Pipeline for Automated Game Content Creation December 2025
+Built an AI-driven pipeline that scrapes news articles from URLs, cleans data, and generates game-specific
+content based on user-selected game type and language.
+Python, AWS Lambda, Amazon S3, AWS Bedrock, AWS SageMaker, CloudWatch, CloudTrail,Prompt Engineering
+Agentic AI Chatbot for Industrial Insights & Application Navigation November 2025
+
+
+Project 2
+
+Developed a chatbot-based recommendation system that ingests cafeteria menu data via client APIs, processes
+it through a data pipeline, and provides semantic menu recommendations with cart management support.
+Python, AWS Bedrock Agent, Nova Pro (LLM), Titan Text Embeddings, AWS Lambda (action groups), Amazon S3
+(vector storage), CloudWatch, CloudTrail
+AI-Powered Cafeteria Menu Recommendation Chatbot October 2025
+
+
+Project 3
+
+Developed a chatbot-based recommendation system that ingests cafeteria menu data via client APIs, processes
+it through a data pipeline, and provides semantic menu recommendations with cart management support.
+Python, AWS Bedrock Agent, Nova Pro (LLM), Titan Text Embeddings, AWS Lambda (action groups), Amazon S3
+(vector storage), CloudWatch, CloudTrail

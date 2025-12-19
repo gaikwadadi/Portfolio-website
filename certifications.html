@@ -28,7 +28,23 @@
     #main {
       background: transparent !important;
       padding: 2rem !important;
-      margin: 0 !important;
+      margin: 0 auto !important;
+      max-width: 1200px !important;
+    }
+
+    /* === Consistent Spacing === */
+    header.major {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    header.major h1 {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    #main .post {
+      margin-top: 0 !important;
+      padding-top: 50px !important;
     }
   </style>
 </head>
@@ -70,7 +86,7 @@
       <section class="post">
         <!-- Main page heading -->
         <header class="major">
-          <h1 style="font-size: 4rem; font-weight: bold; margin-bottom: 2rem;">
+          <h1 style="font-size: 4rem; font-weight: bold; margin-bottom: 2rem; color: white;">
             Certifications
           </h1>
         </header>
@@ -83,12 +99,22 @@
               <h2>AWS Data Engineering Associate</h2>
               <img src="images/certification Data Engineering Associate.jpg" alt="AWS Data Engineering Associate Certificate" />
             </div>
+            <div class="certification-right">
+              <p>
+                Gained expertise in designing and implementing data pipelines on AWS. Learned to work with services like AWS Glue, Amazon Redshift, Amazon Kinesis, and AWS Lambda for data ingestion, transformation, and analytics. Mastered data lake architectures, ETL processes, data warehousing concepts, and real-time streaming data solutions. Developed skills in data security, governance, and optimization techniques for large-scale data processing workloads.
+              </p>
+            </div>
           </div>
 
           <div class="certification">
             <div class="certification-left">
               <h2>AWS AI Practitioner</h2>
               <img src="images/Certification AI Practioner.jpg" alt="AWS AI Practitioner Certificate" />
+            </div>
+            <div class="certification-right">
+              <p>
+                Learned foundational AI and machine learning concepts on AWS platform. Gained hands-on experience with Amazon SageMaker, AWS Bedrock, and AI services like Amazon Rekognition, Comprehend, and Textract. Understood ML model lifecycle, training, deployment, and monitoring. Explored generative AI applications, responsible AI practices, and how to integrate AI solutions into business workflows using AWS managed services.
+              </p>
             </div>
           </div>
 
@@ -97,12 +123,22 @@
               <h2>Data Science Certification</h2>
               <img src="images/Certification Data Science.jpg" alt="Data Science Certificate" />
             </div>
+            <div class="certification-right">
+              <p>
+                Mastered end-to-end data science methodology including data collection, cleaning, exploration, and visualization. Learned statistical analysis, hypothesis testing, and predictive modeling techniques. Gained proficiency in Python libraries like Pandas, NumPy, Scikit-learn, and Matplotlib. Developed skills in machine learning algorithms, feature engineering, model evaluation, and deploying data science solutions to solve real-world business problems.
+              </p>
+            </div>
           </div>
 
           <div class="certification">
             <div class="certification-left">
               <h2>Data Analyst Certification</h2>
               <img src="images/Certification Data Analyst.jpg" alt="Data Analyst Certificate" />
+            </div>
+            <div class="certification-right">
+              <p>
+                Developed expertise in data analysis tools and techniques including SQL for database querying, Excel for data manipulation, and Python for statistical analysis. Learned to create compelling data visualizations using tools like Tableau and Power BI. Gained skills in business intelligence, KPI development, dashboard creation, and translating complex data insights into actionable business recommendations for stakeholders.
+              </p>
             </div>
           </div>
 
@@ -111,6 +147,11 @@
               <h2>AWS Technical Essentials</h2>
               <img src="images/Certification AWS Technical Essential.jpg" alt="AWS Technical Essentials Certificate" />
             </div>
+            <div class="certification-right">
+              <p>
+                Built foundational knowledge of AWS cloud computing concepts and core services. Learned about EC2 instances, S3 storage, VPC networking, IAM security, and basic cloud architecture principles. Understood AWS pricing models, security best practices, and how to navigate the AWS Management Console. Gained practical experience in launching and managing basic AWS resources for web applications and data storage solutions.
+              </p>
+            </div>
           </div>
 
         </section>
@@ -118,21 +159,6 @@
       </section>
 
     </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <section>
-        <section>
-          <h3>Social</h3>
-          <ul class="icons alt">
-            <li><a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
-        </section>
-      </section>
-    </footer>
-
-  </div>
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
@@ -156,49 +182,77 @@
 
     .certification {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
       margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .certification::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+      transition: left 0.6s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .certification:hover::before {
+      left: 100%;
     }
 
     .certification-left {
-      text-align: center;
-      width: 100%;
-      max-width: 600px;
+      flex: 1;
+      min-width: 300px;
     }
 
     .certification-left h2 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: 700;
+      margin-bottom: 1rem;
       color: #ffd700;
-      margin-bottom: 2rem;
-      text-align: center;
+      text-align: left;
     }
 
     .certification-left img {
       width: 100%;
       height: auto;
-      max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: block;
-      margin: 0 auto;
+      border-radius: 8px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
       cursor: pointer;
     }
 
     .certification-left img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .certification-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .certification-right p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin: 0;
+      color: white;
     }
 
     @media (max-width: 800px) {
-      .certification-left img {
-        max-width: 400px;
+      .certification-right {
+        margin-top: 0 !important;
       }
       
       .certification-left h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
     }
 
@@ -225,8 +279,32 @@
 
   <!-- ===== Shared Script ===== -->
   <script>
-    // Simple script for any future enhancements
-    console.log('Certifications page loaded');
+    function alignCertificationDescriptions() {
+      document.querySelectorAll('.certification').forEach(section => {
+        const left = section.querySelector('.certification-left');
+        const right = section.querySelector('.certification-right');
+        if (!left || !right) return;
+
+        const title = left.querySelector('h2');
+        if (!title) {
+          right.style.marginTop = '0px';
+          return;
+        }
+
+        const titleHeight = title.getBoundingClientRect().height;
+        const spacing = 12; // px
+        const totalOffset = Math.round(titleHeight + spacing);
+
+        if (window.innerWidth > 800) {
+          right.style.marginTop = totalOffset + 'px';
+        } else {
+          right.style.marginTop = '0px';
+        }
+      });
+    }
+
+    window.addEventListener('load', alignCertificationDescriptions);
+    window.addEventListener('resize', alignCertificationDescriptions);
   </script>
 
 </body>

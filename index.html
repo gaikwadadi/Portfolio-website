@@ -1,202 +1,800 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>Aditya Gaikwad | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Portfolio of Aditya Gaikwad - Data Scientist & Machine Learning Enthusiast. Showcasing projects, resume, and skills in data science, analytics, and AI." />
-    <meta name="keywords" content="Aditya Gaikwad, Data Scientist, Machine Learning, Data Analytics, AI, Portfolio, Python, SQL, Deep Learning" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="icon" type="image/png" href="images/portfolio.png" />
+  <title>Aditya Gaikwad | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="icon" type="image/png" href="images/portfolio.png" />
+  
+  <style>
+    /* === Global Styles === */
+    body {
+      background: #1a1a1a !important;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-    <!-- Custom Styles -->
-    <style>
-        /* === Full Background Integration === */
-        body {
-            background: #1a1a1a !important;
-            margin: 0;
-            padding: 0;
-        }
+    #wrapper {
+      background: transparent !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      max-width: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+    }
 
-        #wrapper {
-            background: transparent !important;
-            box-shadow: none !important;
-            margin: 0 !important;
-            max-width: none !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-        }
+    /* Override any main.css backgrounds in intro */
+    #intro #wrapper,
+    #intro .wrapper,
+    #intro #main,
+    #intro .main,
+    #intro .post,
+    #intro .section,
+    #intro .container {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
 
-        #main {
-            background: transparent !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
+    /* === Navigation === */
+    #nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+    }
 
-        /* === Fix About Me text colors === */
-        #about-me h1, 
-        #about-me p, 
-        #about-me strong, 
-        #about-me a {
-            color: white !important;
-        }
+    /* === Section Styling === */
+    .section {
+      min-height: 100vh;
+      padding: 80px 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        #about-me a {
-            text-decoration: underline;
-        }
+    /* === Remove black card from intro === */
+    #intro .section,
+    #intro .post,
+    #intro > div,
+    #intro .content {
+      background: none !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
 
-        /* Keep Navbar & Logo white */
-        #nav .links li a,
-        #header .logo {
-            color: white !important;
-        }
+    /* === Intro Section === */
+    #intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      position: relative;
+    }
 
-        /* Navbar active tab highlight */
-        #nav .links li.active a {
-            background: #fff !important;
-            color: #000 !important;
-            border: 2px solid #fff !important;
-        }
+    .intro-social {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
 
-        /* Navbar social icons stay white */
-        #nav .icons a {
-            font-size: 1.4rem;
-            color: white !important;
-        }
+    .intro-social a {
+      color: #ffd700;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
 
-        /* Footer */
-        #footer {
-            background: #eaeaea;
-            color: #333;
-            padding: 0.5rem 2rem;
-            max-width: 900px;
-            margin: 2rem auto 0 auto;
-            border-radius: 4px;
-        }
+    .intro-social a:hover {
+      transform: scale(1.2);
+      color: white;
+    }
 
-        #footer p {
-            margin: 0;
-            font-size: 1.1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
+    #intro * {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
 
-        #footer a.fa-linkedin {
-            color: #0A66C2 !important;
-            font-size: 1.4rem;
-        }
+    .intro-content {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
 
-        #footer a.fa-github {
-            color: #333 !important;
-            font-size: 1.4rem;
-        }
+    .intro-content h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
 
-        /* 👇 updated: more spacing between footer logos only */
-        #footer a.fa-linkedin,
-        #footer a.fa-github {
-            margin: 0 8px;  /* space around each logo */
-        }
-    </style>
+    .intro-content h2 {
+      font-size: 2rem;
+      color: #ffd700 !important;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .intro-photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      border: 4px solid #ffd700;
+      object-fit: cover;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffd700;
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    /* === Section Headers === */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    /* === Projects Section === */
+    #projects .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #projects .project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+      transition: left 0.6s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #projects .project:hover::before {
+      left: 100%;
+    }
+
+    .project-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .project-left h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffd700;
+      text-align: left;
+    }
+
+    .project-left a img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .project-left a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .project-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .project-right p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin: 0;
+      color: white;
+    }
+
+    /* === Certifications Section === */
+    #certifications .certification {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #certifications .certification::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+      transition: left 0.6s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #certifications .certification:hover::before {
+      left: 100%;
+    }
+
+    .certification-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .certification-left h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffd700;
+      text-align: left;
+    }
+
+    .certification-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .certification-left img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .certification-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .certification-right p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin: 0;
+      color: white;
+    }
+
+    /* === Resume Section === */
+    #resume {
+      text-align: center;
+    }
+
+    .resume-content {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .resume-content h2 {
+      color: #ffd700;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .resume-content p {
+      color: white;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .resume-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .resume-btn {
+      background: linear-gradient(45deg, #ffd700, #ffed4e);
+      color: #1a1a1a;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    }
+
+    /* === About Section === */
+    #about .about-content {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .about-text p {
+      color: white;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      border: 3px solid #ffd700;
+    }
+
+    /* === Mobile Responsiveness === */
+    @media (max-width: 800px) {
+      .section {
+        padding: 60px 1rem 1rem;
+      }
+
+      .intro-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .intro-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .section-header h1 {
+        font-size: 2.5rem;
+      }
+
+      .project-right, .certification-right {
+        margin-top: 0 !important;
+      }
+
+      .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body class="is-preload">
 
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-        <!-- Intro Section -->
-        <section id="intro" style="padding: 3rem 2rem; text-align: center; max-width: 900px; margin: auto;">
-            <img src="images/Aditya.png" alt="Aditya Gaikwad" 
-                style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px; border: 3px solid white; display: block; margin: 0 auto 1.5rem auto;" />
-            <h1 style="margin-bottom: 0.5rem; color: white;">Aditya Gaikwad</h1>
-            <p style="font-size: 1.3rem; color: #ffd700;">Data Scientist | Machine Learning | Analytics Enthusiast</p>
-            <ul class="actions" style="margin-top: 2rem; list-style: none; padding: 0;">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore My Work</a></li>
-            </ul>
-        </section>
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="#intro">HOME</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#certifications">CERTIFICATIONS</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+      </ul>
+      <ul class="icons">
+        <li>
+          <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin" aria-label="LinkedIn">
+            <span class="label">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer" class="icon brands fa-github" aria-label="GitHub">
+            <span class="label">GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-        <!-- Header -->
-        <header id="header" style="text-align: center; margin-bottom: 2rem;">
-            <!-- <a href="index.html" class="logo" style="font-size: 1.4rem; font-weight: bold;">ADITYA GAIKWAD</a> -->
-        </header>
+    <!-- Intro Section -->
+    <section id="intro" class="section">
+      <div class="intro-social">
+        <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="intro-content">
+        <img src="images/Aditya.png" alt="Aditya Gaikwad" class="intro-photo" />
+        <h1>Aditya Gaikwad</h1>
+        <h2>Data Scientist | Data Engineer | AI Enthusiast</h2>
+        <p style="color: white; font-size: 1.2rem; max-width: 600px; text-align: center; margin: 0 auto;">
+          Passionate about transforming data into actionable insights and building intelligent solutions that drive business growth.
+        </p>
+      </div>
+      <div class="scroll-indicator" onclick="document.getElementById('projects').scrollIntoView()">
+        ↓
+      </div>
+    </section>
 
-        <!-- Navigation -->
-        <nav id="nav" style="max-width: 900px; margin: auto;">
-            <ul class="links" style="display: flex; justify-content: center; gap: 2rem; padding: 0; list-style: none; margin-bottom: 1rem;">
-                <li class="active"><a href="index.html">ABOUT ME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="certifications.html">CERTIFICATIONS</a></li>                <li><a href="resume.html">RESUME</a></li>
-            </ul>
-            <ul class="icons" style="display: flex; justify-content: center; gap: 1rem; padding: 0; list-style: none;">
-                <li>
-                    <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" 
-                       class="icon brands fa-linkedin" aria-label="LinkedIn"></a>
-                </li>
-                <li>
-                    <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer" 
-                       class="icon brands fa-github" aria-label="GitHub"></a>
-                </li>
-            </ul>
-        </nav>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h1>Worked Projects</h1>
+      </div>
 
-        <!-- About Me Section -->
-        <section id="about-me" style="padding: 3rem 2rem; max-width: 900px; margin: 2rem auto; text-align: justify;">
-            <h1 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">About Me</h1>
-            <p>
-                I am passionate about transforming raw data into actionable insights, specializing in 
-                <strong>data preprocessing, feature engineering, predictive modeling, deep learning, and AI deployment</strong>. 
-                My technical expertise spans <strong>Python, Machine Learning, Deep Learning, SQL, Power BI, Scikit-learn, 
-                TensorFlow, PyTorch, OpenCV, and Transformer-based models</strong>, enabling me to build intelligent solutions 
-                that address real-world business challenges.
-            </p>
-            <p>
-                Beyond my technical skills, I am driven by curiosity and innovation, with a commitment to continuous learning. 
-                I thrive in collaborative environments, merging data-driven thinking with strategic decision-making 
-                to deliver measurable results. My current projects include <strong>deep learning, natural language processing, 
-                and AI-powered analytics</strong>, along with expanding expertise in cloud-based data solutions.
-            </p>
-            <p>
-                I hold a <strong>Masters in Data Science and Analytics with AI</strong>, following my 
-                graduation in <strong>Mechanical Engineering</strong> from <strong>Savitribai Phule Pune University</strong>, 
-                where I developed a strong analytical foundation that now fuels my work in the data science domain.
-            </p>
-            <p>
-                My ultimate goal is to create AI solutions that are not only innovative but also ethical, scalable, 
-                and impactful — shaping the future of intelligent decision-making.
-            </p>
-        </section>
+      <div class="project">
+        <div class="project-left">
+          <h2>Serverless AI Pipeline for Automated Game Content Creation</h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/game-generatin.jpeg" alt="Serverless AI Pipeline for Game Content Creation" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Built an innovative AI-driven pipeline that automatically scrapes news articles from URLs, cleans and processes data, and generates customized game-specific content based on user-selected game type and language preferences. The serverless architecture leverages AWS Lambda for scalable processing, Amazon S3 for data storage, and AWS Bedrock for advanced AI content generation. Implemented comprehensive monitoring using CloudWatch and CloudTrail for pipeline observability. Utilized prompt engineering techniques to ensure high-quality, contextually relevant game content generation across multiple languages and game genres.
+          </p>
+        </div>
+      </div>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <p>
-                <span><strong>Contact:</strong> +91 7499426023</span> 
-                <span>|</span> 
-                <span><strong>Email:</strong> 
-                    <a href="mailto:adigaikwad619@gmail.com" style="color: #222; text-decoration: underline;">
-                        adigaikwad619@gmail.com
-                    </a>
-                </span> 
-                <span>|</span>
-                <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer"
-                   class="icon brands fa-linkedin" aria-label="LinkedIn"></a>
-                <span>|</span> 
-                <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer"
-                   class="icon brands fa-github" aria-label="GitHub"></a>
-            </p>
-        </footer>
+      <div class="project">
+        <div class="project-left">
+          <h2>Agentic AI Chatbot for Industrial Insights & Application Navigation</h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/agentic-ai 1.jpg" alt="Agentic AI Chatbot for Industrial Insights" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Developed an intelligent agentic AI chatbot system designed to provide comprehensive industrial insights and seamless application navigation. The chatbot leverages advanced natural language processing to understand complex industrial queries and provide actionable recommendations. Built using Python with AWS Bedrock Agent for conversational AI capabilities, integrated with Nova Pro LLM for enhanced reasoning and Titan Text Embeddings for semantic understanding. Implemented AWS Lambda action groups for dynamic functionality and utilized Amazon S3 for vector storage, ensuring scalable and efficient query processing with comprehensive monitoring through CloudWatch and CloudTrail.
+          </p>
+        </div>
+      </div>
 
-    </div>
+      <div class="project">
+        <div class="project-left">
+          <h2>AI-Powered Cafeteria Menu Recommendation Chatbot</h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/agentic ai 2.jpg" alt="AI-Powered Cafeteria Menu Recommendation Chatbot" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Developed a sophisticated chatbot-based recommendation system that intelligently ingests cafeteria menu data through client APIs and processes it via a comprehensive data pipeline. The system provides semantic menu recommendations with integrated cart management support, enhancing user dining experience through personalized suggestions. Implemented using Python with AWS Bedrock Agent architecture, powered by Nova Pro LLM for natural language understanding and Titan Text Embeddings for semantic menu analysis. Features AWS Lambda action groups for real-time interactions, Amazon S3 for efficient vector storage, and comprehensive monitoring through CloudWatch and CloudTrail for optimal performance tracking.
+          </p>
+        </div>
+      </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+      <div class="project">
+        <div class="project-left">
+          <h2>AI-Powered Quiz Generation Model</h2>
+          <a href="https://youtu.be/7NVGWD11uHQ" target="_blank" rel="noopener noreferrer">
+            <img src="images/quiz.jpg" alt="AI Quiz Generator Project" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            The Quiz Generator App is an interactive Streamlit web application that leverages Google Gemini LLM to create quizzes in multiple formats including multiple-choice, true/false, and open-ended questions. 
+            It uses structured JSON-based prompt engineering for reliable quiz generation, integrates fuzzy matching and normalization to validate user responses, and provides real-time scoring with feedback. 
+            The app features a clean UI for attempting quizzes, allows users to export quizzes as text files, and includes secure API key handling with retry mechanisms for robustness. 
+            This project demonstrates practical skills in LLM integration, prompt design, and building user-friendly AI-powered applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-left">
+          <h2>TRAFFIC LIGHT DETECTION USING YOLO V8</h2>
+          <a href="https://github.com/gaikwadadi/Traffic-Light-Detection-with-YOLOv8" target="_blank" rel="noopener noreferrer">
+            <img src="images/TrafficLight.jpg" alt="Traffic Light Detection Model" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Built a deep learning model to detect traffic lights in diverse real-world conditions using the Small Traffic Light Dataset (S2TLD).
+            Converted annotations from Pascal VOC to YOLO format, applied extensive data augmentation, and trained a YOLOv8 model with hyperparameter tuning.
+            Evaluated performance using mAP, precision, and recall to ensure robust detection across varied lighting, weather, and angles.
+            Implemented with Python, PyTorch, YOLOv8, OpenCV, and Albumentations, this project demonstrates practical expertise in object detection pipelines
+            from dataset preparation to high-performance model deployment.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-left">
+          <h2>HEART DISEASE CLASSIFICATION MODEL</h2>
+          <a href="https://github.com/gaikwadadi/Heart-Disease-Prediction" target="_blank" rel="noopener noreferrer">
+            <img src="images/Heart.jpg" alt="Heart Disease Project" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Developed a predictive model to assess the likelihood of heart disease using patient health metrics.
+            Implemented and compared multiple algorithms — Logistic Regression, Decision Tree, SVM, Random Forest,
+            and Naive Bayes — with a workflow including data cleaning, preprocessing, feature scaling, and cross-validation.
+            Models were evaluated using precision, recall, F1-score, and accuracy. Built with Python, scikit-learn,
+            pandas, and matplotlib, this project demonstrates end-to-end ML skills from raw data to actionable insights.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-left">
+          <h2>SPOTIFY MUSIC DATA ANALYSIS</h2>
+          <a href="https://github.com/gaikwadadi/Spotify-Data-Analysis-Using-SQL" target="_blank" rel="noopener noreferrer">
+            <img src="images/spotify.jpg" alt="Spotify Data Analysis Project" />
+          </a>
+        </div>
+        <div class="project-right">
+          <p>
+            Conducted an end-to-end SQL project analyzing a Spotify dataset containing track, album, and artist details 
+            along with audio features such as danceability, energy, loudness, and tempo. The process involved normalizing 
+            a denormalized dataset, executing SQL queries across easy, medium, and advanced difficulty levels, and 
+            applying performance optimization techniques like indexing and query plan analysis. The goal was to practice 
+            advanced SQL skills while extracting actionable insights from complex music data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="section-header">
+        <h1>Certifications</h1>
+      </div>
+
+      <div class="certification">
+        <div class="certification-left">
+          <h2>AWS Data Engineering Associate</h2>
+          <img src="images/certification Data Engineering Associate.jpg" alt="AWS Data Engineering Associate Certificate" />
+        </div>
+        <div class="certification-right">
+          <p>
+            Gained expertise in designing and implementing data pipelines on AWS. Learned to work with services like AWS Glue, Amazon Redshift, Amazon Kinesis, and AWS Lambda for data ingestion, transformation, and analytics. Mastered data lake architectures, ETL processes, data warehousing concepts, and real-time streaming data solutions. Developed skills in data security, governance, and optimization techniques for large-scale data processing workloads.
+          </p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <div class="certification-left">
+          <h2>AWS AI Practitioner</h2>
+          <img src="images/Certification AI Practioner.jpg" alt="AWS AI Practitioner Certificate" />
+        </div>
+        <div class="certification-right">
+          <p>
+            Learned foundational AI and machine learning concepts on AWS platform. Gained hands-on experience with Amazon SageMaker, AWS Bedrock, and AI services like Amazon Rekognition, Comprehend, and Textract. Understood ML model lifecycle, training, deployment, and monitoring. Explored generative AI applications, responsible AI practices, and how to integrate AI solutions into business workflows using AWS managed services.
+          </p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <div class="certification-left">
+          <h2>Data Science Certification</h2>
+          <img src="images/Certification Data Science.jpg" alt="Data Science Certificate" />
+        </div>
+        <div class="certification-right">
+          <p>
+            Mastered end-to-end data science methodology including data collection, cleaning, exploration, and visualization. Learned statistical analysis, hypothesis testing, and predictive modeling techniques. Gained proficiency in Python libraries like Pandas, NumPy, Scikit-learn, and Matplotlib. Developed skills in machine learning algorithms, feature engineering, model evaluation, and deploying data science solutions to solve real-world business problems.
+          </p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <div class="certification-left">
+          <h2>Data Analyst Certification</h2>
+          <img src="images/Certification Data Analyst.jpg" alt="Data Analyst Certificate" />
+        </div>
+        <div class="certification-right">
+          <p>
+            Developed expertise in data analysis tools and techniques including SQL for database querying, Excel for data manipulation, and Python for statistical analysis. Learned to create compelling data visualizations using tools like Tableau and Power BI. Gained skills in business intelligence, KPI development, dashboard creation, and translating complex data insights into actionable business recommendations for stakeholders.
+          </p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <div class="certification-left">
+          <h2>AWS Technical Essentials</h2>
+          <img src="images/Certification AWS Technical Essential.jpg" alt="AWS Technical Essentials Certificate" />
+        </div>
+        <div class="certification-right">
+          <p>
+            Built foundational knowledge of AWS cloud computing concepts and core services. Learned about EC2 instances, S3 storage, VPC networking, IAM security, and basic cloud architecture principles. Understood AWS pricing models, security best practices, and how to navigate the AWS Management Console. Gained practical experience in launching and managing basic AWS resources for web applications and data storage solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+      <div class="section-header">
+        <h1>Resume</h1>
+      </div>
+      <div class="resume-content">
+        <h2>Ready to Collaborate?</h2>
+        <p>
+          Download my resume to learn more about my experience, skills, and achievements. 
+          I'm always open to discussing new opportunities and exciting projects.
+        </p>
+        <div class="resume-buttons">
+          <a href="resume/Aditya Gaikwad Resume.pdf" target="_blank" class="resume-btn">
+            📄 View Resume
+          </a>
+          <a href="resume/Aditya Gaikwad Resume.pdf" download target="_blank" class="resume-btn">
+            ⬇️ Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h1>About Me</h1>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Hello! I'm Aditya Gaikwad, a passionate Data Engineer and AI enthusiast with a strong foundation in cloud technologies and machine learning. 
+            I specialize in building scalable data pipelines, implementing AI solutions, and transforming complex datasets into actionable business insights.
+          </p>
+          <p>
+            My journey in technology has led me to work with cutting-edge tools and platforms including AWS, Python, SQL, and various machine learning frameworks. 
+            I'm particularly interested in the intersection of data engineering and artificial intelligence, where I can leverage both domains to create innovative solutions.
+          </p>
+          <p>
+            When I'm not coding or analyzing data, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the tech community. 
+            I believe in continuous learning and staying updated with the latest trends in data science and AI.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Bar -->
+    <section id="social-bar" style="background: white; padding: 1rem 0; text-align: center;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h3 style="color: #ffd700; margin-bottom: 1rem; font-size: 1.8rem;">Connect With Me</h3>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+          <a href="https://www.linkedin.com/in/adii8/" target="_blank" rel="noopener noreferrer" 
+             style="color: #0077b5; font-size: 1.5rem; text-decoration: none; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.2)'" 
+             onmouseout="this.style.transform='scale(1)'">
+            <i class="fab fa-linkedin"></i>
+            <span style="margin-left: 0.5rem; font-size: 0.9rem; vertical-align: middle;">LinkedIn</span>
+          </a>
+          <a href="https://github.com/gaikwadadi" target="_blank" rel="noopener noreferrer"
+             style="color: #333; font-size: 1.5rem; text-decoration: none; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.2)'" 
+             onmouseout="this.style.transform='scale(1)'">
+            <i class="fab fa-github"></i>
+            <span style="margin-left: 0.5rem; font-size: 0.9rem; vertical-align: middle;">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Active navigation highlighting
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.section');
+      const navLinks = document.querySelectorAll('#nav a[href^="#"]');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.parentElement.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+
+    // Alignment for project and certification descriptions
+    function alignDescriptions() {
+      document.querySelectorAll('.project, .certification').forEach(section => {
+        const left = section.querySelector('.project-left, .certification-left');
+        const right = section.querySelector('.project-right, .certification-right');
+        if (!left || !right) return;
+
+        const title = left.querySelector('h2');
+        if (!title) {
+          right.style.marginTop = '0px';
+          return;
+        }
+
+        const titleHeight = title.getBoundingClientRect().height;
+        const spacing = 12;
+        const totalOffset = Math.round(titleHeight + spacing);
+
+        if (window.innerWidth > 800) {
+          right.style.marginTop = totalOffset + 'px';
+        } else {
+          right.style.marginTop = '0px';
+        }
+      });
+    }
+
+    window.addEventListener('load', alignDescriptions);
+    window.addEventListener('resize', alignDescriptions);
+  </script>
+
 </body>
 </html>
