@@ -149,6 +149,7 @@
       font-size: 2rem;
       animation: bounce 2s infinite;
       cursor: pointer;
+      z-index: 10;
     }
 
     @keyframes bounce {
@@ -433,6 +434,17 @@
         padding: 0.5rem;
       }
 
+      /* Fix scroll indicator positioning on mobile */
+      .scroll-indicator {
+        bottom: 15px;
+        font-size: 1.5rem;
+      }
+
+      /* Ensure intro content has enough bottom margin */
+      .intro-content {
+        margin-bottom: 4rem;
+      }
+
       /* Mobile touch targets */
       .resume-btn {
         min-height: 44px;
@@ -483,6 +495,15 @@
       #social-bar div[style*="flex"] {
         flex-direction: column !important;
         gap: 1rem !important;
+      }
+
+      /* Hide scroll indicator on very small screens to save space */
+      .scroll-indicator {
+        display: none;
+      }
+
+      .intro-content {
+        margin-bottom: 2rem;
       }
     }
 
